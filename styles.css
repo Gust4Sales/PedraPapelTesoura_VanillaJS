@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button:focus {
+    outline: none;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #383870;
+}
+
+header {
+    width: auto;
+    height: 40px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+	bottom: 500px;
+	left: 0;
+	right: 0;
+    margin: auto;
+    color: #ffb142;
+    letter-spacing: 3px;
+}
+
+.box {
+    width: 820px;
+    height: 350px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+	top:0;
+	bottom: 50px;
+	left: 0;
+	right: 0;
+    margin: auto;
+    border: 5px solid #fff;
+    align-items: center;
+    background-color: #424286;
+}
+
+.placar {
+    width: 80%;
+    height: 50px;
+    padding-top: 10px;
+    text-align: center;
+    border-bottom: 2px solid #c4bdad;
+    color: #ffda79;
+}
+
+h3{ 
+    padding: 40px 0 ;
+    color: #ffda79;
+}
+
+.choices {
+    user-select: none;
+}
+
+.choices a {
+    border: 3px solid #000;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 0 10px;
+    opacity: .8;
+}
+
+.choices a img {
+    width: 150px;
+    height: 150px; 
+    margin: 0 25px; 
+}
+
+.choices a:hover {
+    border: 3px solid #ffb142;
+    opacity: 1;
+}
+
+.highscore {
+    width: min-content;
+    height: min-content;
+    position: absolute;
+    top: 420px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    
+    user-select: none; 
+    color: #ff5252;
+    font-size: 20px;
+    text-transform: capitalize;
+    background: none;
+    padding: 10px 20px;
+    border: solid #ff5252;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.highscore:hover {
+    background-color: #ff5252;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.highscoreText{
+    width: 100px;
+    height: min-content;
+    position: absolute;
+    top: 500px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    text-align: center;
+    color: #f7f1e3;
+    opacity: 0;
+    cursor: default;
+}
+
+.result {
+    width: 100%;
+    height: min-content;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 185px;
+    left: 0;
+    margin: auto;
+    /* background: linear-gradient(#18705d, #33d9b2); win */
+    /* background: linear-gradient(#a13131, #fc5656); lose */
+    /* background: linear-gradient(#74716c, #f7f1e3); tie*/
+    font-size: 15px;
+    text-align: center;
+    color: rgb(48, 45, 45);
+    padding: 10px;
+    opacity: 0;
+
+    animation-name: showResult;
+    animation-timing-function: ease-out;
+    animation-duration: 4s;
+}
+
+@keyframes winBoxEffect {
+    to{
+        border-color: green;
+    }
+}
+
+@keyframes loseBoxEffect {
+    to{
+        border-color: red;
+    }
+}
+
+@keyframes tieBoxEffect {
+    to{
+        border-color: grey;
+    }
+}
+
+@keyframes showResult{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 90%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+@keyframes showHighscore{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
